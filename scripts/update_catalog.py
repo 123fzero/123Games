@@ -22,8 +22,21 @@ PAGE_LIMIT = 100
 
 
 def fetch_123fzero_repos():
-    """Stub."""
-    return {}
+    """Fetch public repos for 123fzero. Returns dict of lowercase repo name -> repo info."""
+    url = f"{GITHUB_API}/users/{FEATURED_OWNER}/repos"
+    params = {"per_page": 100, "type": "public"}
+    headers = {"Accept": "application/vnd.github.v3+json"}
+    resp = requests.get(url, params=params, headers=headers, timeout=REQUEST_TIMEOUT)
+    resp.raise_for_status()
+    repos = {}
+    for repo in resp.json():
+        repos[repo["name"].lower()] = {
+            "name": repo["name"],
+            "description": repo.get("description") or "",
+            "url": repo["html_url"],
+            "topics": repo.get("topics", []),
+        }
+    return repos
 
 def fetch_official_catalog():
     """Stub."""
