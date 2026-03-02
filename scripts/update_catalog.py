@@ -20,6 +20,18 @@ README_PATH = REPO_ROOT / "README.md"
 REQUEST_TIMEOUT = 30
 PAGE_LIMIT = 100
 
+# Map 123fzero repo names to catalog category names.
+# Repos not listed here (or listed as None) are skipped.
+FEATURED_REPO_CATEGORIES = {
+    "123dicednd": "Games",
+    "123puffpacer": "Tools",
+    "123periodictimer": "Tools",
+    "123pomadoro": "Tools",
+    # Skip non-app repos
+    "123games": None,
+    "flipper-zero-awesome": None,
+}
+
 # Sections from awesome-flipperzero to include (these don't overlap with official catalog)
 AWESOME_SECTIONS_TO_INCLUDE = [
     "Databases & Dumps",
@@ -169,39 +181,26 @@ def fetch_awesome_list():
 
     return sections
 
-def is_featured(app, featured_repos):
-    """Check if an app belongs to 123fzero."""
-    author = app.get("author", "").lower()
-    if FEATURED_OWNER.lower() in author:
-        return True
-    url = app.get("url", app.get("app_url", "")).lower()
-    if f"github.com/{FEATURED_OWNER.lower()}" in url:
-        return True
-    # Check by alias/name match against 123fzero repo names
-    alias = app.get("alias", "").lower()
-    name = app.get("name", "").lower().replace(" ", "")
-    for repo_name in featured_repos:
-        clean_repo = repo_name.replace("123", "").lower()
-        if clean_repo and (clean_repo in alias or clean_repo in name):
-            return True
-    return False
-
-
-def _find_repo_url(app, featured_repos):
-    """Find the GitHub repo URL for a featured app."""
-    for repo_info in featured_repos.values():
-        clean_repo = repo_info["name"].replace("123", "").lower()
-        if clean_repo and (
-            clean_repo in app.get("alias", "").lower()
-            or clean_repo in app.get("name", "").lower().replace(" ", "")
-        ):
-            return repo_info["url"]
-    return None
+def _build_featured_by_category(featured_repos):
+    """Build a dict of category_name -> list of featured app entries from 123fzero repos."""
+    by_cat = {}
+    for repo_key, repo_info in featured_repos.items():
+        cat_name = FEATURED_REPO_CATEGORIES.get(repo_key)
+        if not cat_name:
+            continue
+        by_cat.setdefault(cat_name, []).append({
+            "name": repo_info["name"],
+            "description": repo_info["description"],
+            "author": FEATURED_OWNER,
+            "url": repo_info["url"],
+        })
+    return by_cat
 
 
 def generate_readme(categories, catalog_apps, awesome_sections, featured_repos):
     """Generate the full README.md content."""
     lines = []
+    featured_by_cat = _build_featured_by_category(featured_repos)
 
     # Header
     lines.append("# 123 Games")
@@ -242,34 +241,31 @@ def generate_readme(categories, catalog_apps, awesome_sections, featured_repos):
 
     for cat in categories:
         cat_id = cat["_id"]
+        cat_name = cat["name"]
         apps = catalog_apps.get(cat_id, [])
-        lines.append(f"## {cat['name']}")
+        featured = featured_by_cat.get(cat_name, [])
+
+        lines.append(f"## {cat_name}")
         lines.append("")
 
-        if not apps:
+        if not apps and not featured:
             lines.append("*No apps in this category.*")
             lines.append("")
             continue
-
-        # Split into featured and regular
-        featured = [a for a in apps if is_featured(a, featured_repos)]
-        regular = [a for a in apps if not is_featured(a, featured_repos)]
 
         # Table header
         lines.append("| | App | Description | Author | Link |")
         lines.append("|---|-----|-------------|--------|------|")
 
-        # Featured apps first
+        # Featured 123fzero apps first
         for app in featured:
-            repo_url = _find_repo_url(app, featured_repos)
-            source_link = f"[GitHub]({repo_url})" if repo_url else f"[Catalog]({app['app_url']})"
             lines.append(
-                f"| ⭐ | **[{app['name']}]({app['app_url']})** | "
-                f"{app['description']} | {app['author']} | {source_link} |"
+                f"| ⭐ | **[{app['name']}]({app['url']})** | "
+                f"{app['description']} | {app['author']} | [GitHub]({app['url']}) |"
             )
 
-        # Regular apps
-        for app in regular:
+        # All catalog apps
+        for app in apps:
             lines.append(
                 f"| | [{app['name']}]({app['app_url']}) | "
                 f"{app['description']} | {app['author']} | [Catalog]({app['app_url']}) |"
@@ -303,14 +299,7 @@ def generate_readme(categories, catalog_apps, awesome_sections, featured_repos):
                     lines.append(f"### {sub_name}")
                     lines.append("")
 
-                featured_entries = [e for e in entries if is_featured(e, featured_repos)]
-                regular_entries = [e for e in entries if not is_featured(e, featured_repos)]
-
-                for entry in featured_entries:
-                    lines.append(
-                        f"- ⭐ **[{entry['name']}]({entry['url']})** — {entry['description']}"
-                    )
-                for entry in regular_entries:
+                for entry in entries:
                     lines.append(
                         f"- [{entry['name']}]({entry['url']}) — {entry['description']}"
                     )

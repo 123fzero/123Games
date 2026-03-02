@@ -232,6 +232,7 @@ A catalog of Flipper Zero apps and games. Maintained by [123fzero](https://githu
 
 | | App | Description | Author | Link |
 |---|-----|-------------|--------|------|
+| ⭐ | **[123DiceDnD](https://github.com/123fzero/123DiceDnD)** | D&D dice roller for Flipper Zero — all polyhedral dice with 3D animation. Momentum firmware | 123fzero | [GitHub](https://github.com/123fzero/123DiceDnD) |
 | | [2048](https://lab.flipper.net/apps/game_2048) | Play the port of the 2048 game on Flipper Zero. | @eugene-kirzhanov | [Catalog](https://lab.flipper.net/apps/game_2048) |
 | | [4 in row](https://lab.flipper.net/apps/4inrow) | 4 in row Game | leo-need-more-coffee | [Catalog](https://lab.flipper.net/apps/4inrow) |
 | | [Air Arkanoid](https://lab.flipper.net/apps/air_arkanoid) | Arkanoid game that supports the Video Game Module motion sensor | @DrZlo13 | [Catalog](https://lab.flipper.net/apps/air_arkanoid) |
@@ -340,6 +341,9 @@ A catalog of Flipper Zero apps and games. Maintained by [123fzero](https://githu
 
 | | App | Description | Author | Link |
 |---|-----|-------------|--------|------|
+| ⭐ | **[123PeriodicTimer](https://github.com/123fzero/123PeriodicTimer)** |  | 123fzero | [GitHub](https://github.com/123fzero/123PeriodicTimer) |
+| ⭐ | **[123Pomadoro](https://github.com/123fzero/123Pomadoro)** |  | 123fzero | [GitHub](https://github.com/123fzero/123Pomadoro) |
+| ⭐ | **[123PuffPacer](https://github.com/123fzero/123PuffPacer)** | Puff interval timer for Flipper Zero — pace your heated tobacco sessions (IQOS, Lil Solid, glo, Ploom) with vibration & sound alerts 💨 | 123fzero | [GitHub](https://github.com/123fzero/123PuffPacer) |
 | | [Analog Clock](https://lab.flipper.net/apps/analog_clock) | Shows analog clock on Flipper screen | @scrolltex | [Catalog](https://lab.flipper.net/apps/analog_clock) |
 | | [Authenticator](https://lab.flipper.net/apps/totp) | Software-based TOTP/HOTP authenticator for Flipper Zero device | Alexander Kopachov (@akopachov) | [Catalog](https://lab.flipper.net/apps/totp) |
 | | [Barcode App](https://lab.flipper.net/apps/barcode_app) | App allows you to display various barcodes on flipper screen | @Kingal1337 | [Catalog](https://lab.flipper.net/apps/barcode_app) |
