@@ -29,10 +29,7 @@ body {
   min-height: 100vh;
   font-family: "IBM Plex Mono", "SFMono-Regular", "Menlo", monospace;
   color: var(--text);
-  background:
-    radial-gradient(circle at top right, rgba(23, 217, 255, 0.08), transparent 28%),
-    radial-gradient(circle at top left, rgba(86, 255, 175, 0.08), transparent 32%),
-    linear-gradient(180deg, #06100c 0%, #040706 45%, #020403 100%);
+  background: var(--bg);
 }
 
 .noise {
@@ -436,6 +433,8 @@ h3 {
 .catalog-sections {
   display: grid;
   gap: 18px;
+  min-height: clamp(42rem, 72vh, 64rem);
+  align-content: start;
 }
 
 .section-block,

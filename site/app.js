@@ -30,7 +30,7 @@ function itemMatchesFilter(item) {
     return hasCommunity && !hasOfficial;
   }
   if (state.filter === "both") {
-    return hasOfficial && hasCommunity;
+    return hasOfficial || hasCommunity;
   }
   return true;
 }
@@ -56,6 +56,10 @@ function itemMatchesCategory(item) {
     return true;
   }
   return state.categories.includes(item.section);
+}
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
 function populateCategoryFilter(data) {
@@ -84,6 +88,7 @@ function populateCategoryFilter(data) {
         els.categoryFilterList.querySelectorAll("input[type='checkbox']:checked")
       ).map((input) => input.value);
       render();
+      scrollToTop();
     });
   });
 }
@@ -99,7 +104,7 @@ function renderSections(data) {
     return normalize(item.name).includes(state.query);
   });
 
-  if (featuredItems.length) {
+  if (!state.categories.length && featuredItems.length) {
     const featuredCards = featuredItems.map((item) => `
       <article class="featured-card">
         <a href="${item.url}" rel="noopener"><strong>${item.name}</strong></a>
@@ -240,12 +245,14 @@ function resetCategories() {
   state.categories = [];
   syncFilterUi();
   render();
+  scrollToTop();
 }
 
 function render() {
   if (!state.data) {
     return;
   }
+  syncFilterUi();
   renderSections(state.data);
   syncUrl();
 }

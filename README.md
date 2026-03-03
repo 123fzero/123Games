@@ -2,6 +2,14 @@
 
 A curated Flipper Zero app catalog featuring the best Flipper Zero apps, plugins, games, tools, and community resources. This repository combines the Official Flipper App Catalog with a community catalog to help users find the most useful Flipper Zero software in one place.
 
+## Pre-Deploy Check
+
+Run the site filter regression tests before deploying:
+
+```bash
+python3 -m unittest scripts/test_site_filters.py
+```
+
 ## Featured 123fzero Apps
 
 - **[123DiceDnD](https://github.com/123fzero/123DiceDnD)** (Games) ⭐ 1: D&D dice roller for Flipper Zero — all polyhedral dice with 3D animation. Momentum firmware
