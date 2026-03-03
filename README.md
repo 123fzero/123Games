@@ -2,7 +2,7 @@
 
 A curated, auto-updated collection of the best Flipper Zero apps, tools, games, and community resources in one place. This project combines the official app catalog with standout picks from the community, then organizes everything into a single index so it is easier to discover what is useful, maintained, and worth trying.
 
-`🏛️` = Official Flipper App Catalog, `💎` = From awesome-flipperzero.
+`🏛️` = Official Flipper App Catalog, `💎` = Community Catalog (curated from awesome-flipperzero).
 
 ## Table of Contents
 
@@ -687,7 +687,7 @@ A curated, auto-updated collection of the best Flipper Zero apps, tools, games, 
 ## Sources
 
 - Official: [Official Flipper App Catalog](https://lab.flipper.net/apps)
-- Community: [awesome-flipperzero](https://github.com/djsime1/awesome-flipperzero)
+- Community Catalog: [awesome-flipperzero](https://github.com/djsime1/awesome-flipperzero)
 
 ---
 

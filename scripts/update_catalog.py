@@ -690,7 +690,7 @@ def generate_readme(categories, catalog_apps, awesome_sections, featured_repos):
     lines.append("")
     lines.append(
         f"`{OFFICIAL_EMOJI}` = Official Flipper App Catalog, "
-        f"`{COMMUNITY_EMOJI}` = From awesome-flipperzero."
+        f"`{COMMUNITY_EMOJI}` = Community Catalog (curated from awesome-flipperzero)."
     )
     lines.append("")
 
@@ -729,7 +729,7 @@ def generate_readme(categories, catalog_apps, awesome_sections, featured_repos):
     lines.append("")
     lines.append(f"- Official: [Official Flipper App Catalog]({LAB_URL})")
     lines.append(
-        "- Community: [awesome-flipperzero]"
+        "- Community Catalog: [awesome-flipperzero]"
         "(https://github.com/djsime1/awesome-flipperzero)"
     )
     lines.append("")
