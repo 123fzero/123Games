@@ -46,54 +46,75 @@
 <body>
   <div class="noise"></div>
   <header class="hero">
-    <p class="eyebrow">FLIPPER ZERO // CURATED INDEX</p>
+    <div class="brand-row">
+      <div class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 96 96" role="img" focusable="false">
+          <rect x="18" y="22" width="52" height="36" rx="12"></rect>
+          <rect x="30" y="34" width="28" height="12" rx="4"></rect>
+          <circle cx="77" cy="40" r="9"></circle>
+          <path d="M24 62c12 0 20 6 24 12 8-7 19-10 30-10"></path>
+        </svg>
+      </div>
+      <div>
+        <p class="eyebrow">FLIPPER ZERO // CURATED INDEX</p>
+        <p class="brand-text">Flipper Zero Catalog</p>
+      </div>
+    </div>
     <h1>Flipper Zero App Catalog</h1>
     <p class="lede">
       Search the best Flipper Zero apps, Flipper Zero plugins, Flipper Zero games, and practical
       Flipper Zero tools in one hacker-friendly catalog.
     </p>
+    <p class="hero-link">
+      <a href="https://github.com/123fzero/flipper-zero-awesome" rel="noopener">
+        View this project on GitHub
+      </a>
+    </p>
   </header>
 
-  <main class="layout">
-    <aside class="panel sidebar">
-      <section>
-        <h2>Search Catalog</h2>
-        <label class="search-wrap" for="search">
-          <span>grep</span>
-          <input
-            id="search"
-            name="q"
-            type="search"
-            autocomplete="off"
-            placeholder="Search apps, authors, keywords..."
-          >
-        </label>
-        <p id="result-count" class="muted">Loading catalog...</p>
-      </section>
-
-      <section>
-        <h2>Source Filter</h2>
-        <div class="filter-grid">
-          <button class="chip active" type="button" data-filter="all">All</button>
-          <button class="chip" type="button" data-filter="official">🏛️ Official</button>
-          <button class="chip" type="button" data-filter="community">💎 Community</button>
-          <button class="chip" type="button" data-filter="both">🏛️ + 💎</button>
-        </div>
-      </section>
-
+  <main class="stack">
+    <section class="panel featured-panel">
       <section>
         <h2>Featured 123fzero</h2>
-        <div id="featured-list" class="featured-list"></div>
+        <div id="featured-list" class="featured-list featured-grid"></div>
       </section>
-    </aside>
+    </section>
 
     <section class="panel content">
       <div class="content-top">
-        <div>
+        <div class="controls">
           <h2>Live Search</h2>
           <p class="muted">
             JavaScript search runs entirely in the browser against the generated catalog index.
           </p>
+          <label class="search-wrap" for="search">
+            <span>grep</span>
+            <input
+              id="search"
+              name="q"
+              type="search"
+              autocomplete="off"
+              placeholder="Search apps, authors, keywords..."
+            >
+          </label>
+          <div class="toolbar">
+            <div class="filter-group">
+              <span class="toolbar-label">Source</span>
+              <div class="filter-grid">
+                <button class="chip active" type="button" data-filter="all">All</button>
+                <button class="chip" type="button" data-filter="official">🏛️ Official</button>
+                <button class="chip" type="button" data-filter="community">💎 Community</button>
+                <button class="chip" type="button" data-filter="both">🏛️ + 💎</button>
+              </div>
+            </div>
+            <div class="filter-group category-group">
+              <label class="toolbar-label" for="category-filter">Category</label>
+              <select id="category-filter" class="select-filter">
+                <option value="all">All categories</option>
+              </select>
+            </div>
+          </div>
+          <p id="result-count" class="muted">Loading catalog...</p>
         </div>
         <div class="legend">
           <span>🏛️ Official Flipper App Catalog</span>

@@ -2,6 +2,7 @@ const state = {
   data: null,
   query: "",
   filter: "all",
+  category: "all",
 };
 
 const els = {
@@ -10,6 +11,7 @@ const els = {
   featured: document.querySelector("#featured-list"),
   sections: document.querySelector("#catalog-sections"),
   chips: Array.from(document.querySelectorAll(".chip")),
+  categoryFilter: document.querySelector("#category-filter"),
 };
 
 function normalize(text) {
@@ -48,6 +50,13 @@ function itemMatchesQuery(item) {
   return haystack.includes(state.query);
 }
 
+function itemMatchesCategory(item) {
+  if (state.category === "all") {
+    return true;
+  }
+  return item.section === state.category;
+}
+
 function flattenItems(data) {
   const items = [];
   data.sections.forEach((section) => {
@@ -76,6 +85,15 @@ function renderFeatured(data) {
   `).join("");
 }
 
+function populateCategoryFilter(data) {
+  const options = ['<option value="all">All categories</option>'];
+  data.sections.forEach((section) => {
+    options.push(`<option value="${section.name}">${section.name}</option>`);
+  });
+  els.categoryFilter.innerHTML = options.join("");
+  els.categoryFilter.value = state.category;
+}
+
 function renderSections(data) {
   const blocks = [];
   let count = 0;
@@ -85,7 +103,7 @@ function renderSections(data) {
 
     section.subsections.forEach((subsection) => {
       const items = subsection.items.filter(
-        (item) => itemMatchesFilter(item) && itemMatchesQuery(item)
+        (item) => itemMatchesFilter(item) && itemMatchesCategory(item) && itemMatchesQuery(item)
       );
 
       if (!items.length) {
@@ -177,6 +195,7 @@ async function loadCatalog() {
     throw new Error(`Failed to load catalog: ${response.status}`);
   }
   state.data = await response.json();
+  populateCategoryFilter(state.data);
   render();
 }
 
@@ -200,6 +219,11 @@ function init() {
       state.filter = chip.dataset.filter;
       render();
     });
+  });
+
+  els.categoryFilter.addEventListener("change", (event) => {
+    state.category = event.target.value;
+    render();
   });
 
   loadCatalog().catch((error) => {

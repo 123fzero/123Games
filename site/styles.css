@@ -52,7 +52,7 @@ a:hover {
 }
 
 .hero,
-.layout,
+.stack,
 .footer {
   position: relative;
   z-index: 1;
@@ -64,11 +64,50 @@ a:hover {
   padding: 48px 0 28px;
 }
 
+.brand-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 68px;
+  height: 68px;
+  border-radius: 18px;
+  border: 1px solid rgba(79, 255, 170, 0.22);
+  background:
+    radial-gradient(circle at 30% 30%, rgba(23, 217, 255, 0.12), transparent 42%),
+    linear-gradient(180deg, rgba(9, 23, 18, 0.92), rgba(4, 10, 8, 0.92));
+  box-shadow: inset 0 0 18px rgba(79, 255, 170, 0.08);
+}
+
+.brand-mark svg {
+  width: 44px;
+  height: 44px;
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 0 6px rgba(86, 255, 175, 0.18));
+}
+
 .eyebrow {
   margin: 0 0 10px;
   color: var(--accent);
   letter-spacing: 0.16em;
   font-size: 0.78rem;
+}
+
+.brand-text {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .hero h1 {
@@ -85,6 +124,14 @@ a:hover {
   color: var(--muted);
   font-size: 1rem;
   line-height: 1.7;
+}
+
+.hero-link {
+  margin: 14px 0 0;
+}
+
+.hero-link a {
+  color: var(--accent-2);
 }
 
 .chip {
@@ -105,9 +152,8 @@ a:hover {
   transform: translateY(-1px);
 }
 
-.layout {
+.stack {
   display: grid;
-  grid-template-columns: 340px minmax(0, 1fr);
   gap: 20px;
   padding-bottom: 36px;
 }
@@ -120,22 +166,11 @@ a:hover {
   backdrop-filter: blur(6px);
 }
 
-.sidebar,
 .content {
   padding: 20px;
 }
 
-.sidebar {
-  display: grid;
-  gap: 18px;
-  align-content: start;
-  position: sticky;
-  top: 16px;
-  max-height: calc(100vh - 32px);
-  overflow: auto;
-}
-
-.sidebar section,
+.featured-panel,
 .content-top {
   border: 1px solid rgba(79, 255, 170, 0.09);
   border-radius: 16px;
@@ -174,6 +209,30 @@ h3 {
   font: inherit;
 }
 
+.controls {
+  flex: 1;
+  min-width: 0;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 14px;
+}
+
+.filter-group {
+  display: grid;
+  gap: 8px;
+}
+
+.toolbar-label {
+  color: var(--muted);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
 .muted {
   color: var(--muted);
 }
@@ -184,9 +243,23 @@ h3 {
   gap: 10px;
 }
 
+.select-filter {
+  min-width: 220px;
+  border: 1px solid var(--line-strong);
+  border-radius: 14px;
+  padding: 10px 12px;
+  background: rgba(1, 9, 7, 0.72);
+  color: var(--text);
+  font: inherit;
+}
+
 .featured-list {
   display: grid;
   gap: 12px;
+}
+
+.featured-grid {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 
 .featured-card {
@@ -228,6 +301,7 @@ h3 {
 .content-top {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   gap: 16px;
   margin-bottom: 18px;
 }
@@ -328,15 +402,6 @@ h3 {
 }
 
 @media (max-width: 1024px) {
-  .layout {
-    grid-template-columns: 1fr;
-  }
-
-  .sidebar {
-    position: static;
-    max-height: none;
-  }
-
   .content-top {
     flex-direction: column;
   }
@@ -351,8 +416,21 @@ h3 {
     padding-top: 28px;
   }
 
-  .chip {
+  .brand-row {
+    align-items: flex-start;
+  }
+
+  .featured-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .chip,
+  .select-filter {
     width: 100%;
     text-align: center;
+  }
+
+  .toolbar {
+    flex-direction: column;
   }
 }
