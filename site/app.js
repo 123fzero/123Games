@@ -199,13 +199,26 @@ function render() {
   if (!state.data) {
     return;
   }
-  renderFeatured(state.data);
   renderSections(state.data);
   syncUrl();
 }
 
+function getCatalogUrl() {
+  let basePath = window.location.pathname;
+
+  if (basePath.endsWith("/index.html")) {
+    basePath = basePath.slice(0, -"/index.html".length);
+  }
+
+  if (!basePath.endsWith("/")) {
+    basePath = `${basePath}/`;
+  }
+
+  return `${window.location.origin}${basePath}catalog.json`;
+}
+
 async function loadCatalog() {
-  const response = await fetch("catalog.json");
+  const response = await fetch(getCatalogUrl());
   if (!response.ok) {
     throw new Error(`Failed to load catalog: ${response.status}`);
   }
