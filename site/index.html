@@ -78,23 +78,20 @@
       <div class="content-top">
         <div class="controls">
           <h2>Live Search</h2>
-          <label class="search-wrap" for="search">
-            <span># grep</span>
-            <input
-              id="search"
-              name="q"
-              type="search"
-              autocomplete="off"
-              placeholder="Search apps, authors, keywords..."
-            >
-          </label>
-          <div class="toolbar">
+          <div class="search-row">
+            <label class="search-wrap" for="search">
+              <span># grep</span>
+              <input
+                id="search"
+                name="q"
+                type="search"
+                autocomplete="off"
+                placeholder="Search apps, authors, keywords..."
+              >
+            </label>
+            <button id="reset-filters" class="reset-button" type="button">× Reset filters</button>
           </div>
           <p id="result-count" class="muted">Loading catalog...</p>
-        </div>
-        <div class="legend">
-          <span>🏛️ Official Flipper App Catalog</span>
-          <span>💎 Community Catalog</span>
         </div>
       </div>
 
@@ -119,6 +116,9 @@
       <section class="sidebar-section">
         <h2>Category Filters</h2>
         <p class="muted compact">Pick one or more categories. URL updates automatically for sharing.</p>
+        <div class="sidebar-actions">
+          <button id="reset-categories" class="reset-button compact-button" type="button" hidden>× Reset category</button>
+        </div>
         <div id="category-filter-list" class="checkbox-list"></div>
       </section>
     </aside>

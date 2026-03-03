@@ -7,6 +7,8 @@ const state = {
 
 const els = {
   search: document.querySelector("#search"),
+  resetFilters: document.querySelector("#reset-filters"),
+  resetCategories: document.querySelector("#reset-categories"),
   resultCount: document.querySelector("#result-count"),
   sections: document.querySelector("#catalog-sections"),
   chips: Array.from(document.querySelectorAll(".chip")),
@@ -59,11 +61,18 @@ function itemMatchesCategory(item) {
 function populateCategoryFilter(data) {
   const options = [];
   data.sections.forEach((section) => {
+    const itemCount = section.subsections.reduce(
+      (total, subsection) => total + subsection.items.length,
+      0
+    );
     const checked = state.categories.includes(section.name) ? "checked" : "";
     options.push(`
       <label class="check-item">
-        <input type="checkbox" value="${section.name}" ${checked}>
-        <span>${section.name}</span>
+        <span class="check-main">
+          <input type="checkbox" value="${section.name}" ${checked}>
+          <span>${section.name}</span>
+        </span>
+        <span class="check-count">${itemCount}</span>
       </label>
     `);
   });
@@ -83,8 +92,15 @@ function renderSections(data) {
   const blocks = [];
   let count = 0;
 
-  if (data.featured.length) {
-    const featuredCards = data.featured.map((item) => `
+  const featuredItems = data.featured.filter((item) => {
+    if (!state.query) {
+      return true;
+    }
+    return normalize(item.name).includes(state.query);
+  });
+
+  if (featuredItems.length) {
+    const featuredCards = featuredItems.map((item) => `
       <article class="featured-card">
         <a href="${item.url}" rel="noopener"><strong>${item.name}</strong></a>
         <div class="badge-line">
@@ -195,6 +211,37 @@ function syncUrl() {
   window.history.replaceState({}, "", url);
 }
 
+function syncFilterUi() {
+  els.chips.forEach((chip) => {
+    chip.classList.toggle("active", chip.dataset.filter === state.filter);
+  });
+
+  els.resetCategories.hidden = state.categories.length === 0;
+
+  if (!els.categoryFilterList) {
+    return;
+  }
+
+  Array.from(els.categoryFilterList.querySelectorAll("input[type='checkbox']")).forEach((checkbox) => {
+    checkbox.checked = state.categories.includes(checkbox.value);
+  });
+}
+
+function resetFilters() {
+  state.query = "";
+  state.filter = "all";
+  state.categories = [];
+  els.search.value = "";
+  syncFilterUi();
+  render();
+}
+
+function resetCategories() {
+  state.categories = [];
+  syncFilterUi();
+  render();
+}
+
 function render() {
   if (!state.data) {
     return;
@@ -252,18 +299,16 @@ function init() {
   });
 
   els.chips.forEach((chip) => {
-    if (chip.dataset.filter === state.filter) {
-      chip.classList.add("active");
-    } else {
-      chip.classList.remove("active");
-    }
     chip.addEventListener("click", () => {
-      els.chips.forEach((candidate) => candidate.classList.remove("active"));
-      chip.classList.add("active");
       state.filter = chip.dataset.filter;
+      syncFilterUi();
       render();
     });
   });
+
+  els.resetFilters.addEventListener("click", resetFilters);
+  els.resetCategories.addEventListener("click", resetCategories);
+  syncFilterUi();
 
   loadCatalog().catch((error) => {
     console.error(error);
