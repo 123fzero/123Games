@@ -21,6 +21,7 @@ python3 -m unittest scripts/test_site_filters.py
 Discover Flipper Zero apps, Flipper Zero plugins, Flipper Zero games, and practical Flipper Zero tools from both official and community sources.
 
 `🏛️` = Official Flipper App Catalog, `💎` = Community Catalog (curated from awesome-flipperzero).
+In the site UI, the `🏛️ + 💎` source filter shows entries from either source, not only entries tagged with both.
 
 ## Table of Contents
 
