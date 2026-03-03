@@ -87,14 +87,6 @@ a:hover {
   line-height: 1.7;
 }
 
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 22px;
-}
-
-.hero-actions a,
 .chip {
   border: 1px solid var(--line-strong);
   background: rgba(9, 21, 16, 0.66);
@@ -106,7 +98,6 @@ a:hover {
   transition: border-color 120ms ease, color 120ms ease, transform 120ms ease;
 }
 
-.hero-actions a:hover,
 .chip:hover,
 .chip.active {
   border-color: var(--accent);
@@ -360,11 +351,6 @@ h3 {
     padding-top: 28px;
   }
 
-  .hero-actions {
-    flex-direction: column;
-  }
-
-  .hero-actions a,
   .chip {
     width: 100%;
     text-align: center;
