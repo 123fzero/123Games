@@ -331,7 +331,7 @@
               "description": "Receive weather data from a wide range of supported Sub-1GHz remote sensor",
               "author": "@Skorpionm",
               "authorUrl": "https://github.com/Skorpionm",
-              "rating": "⭐ 442",
+              "rating": "⭐ 443",
               "officialUrl": "https://lab.flipper.net/apps/weather_station",
               "communityUrl": "",
               "repoUrl": "https://github.com/flipperdevices/flipperzero-good-faps/blob/-/weather_station",
@@ -519,13 +519,34 @@
               "description": "MIFARE Classic key recovery tool",
               "author": "@noproto",
               "authorUrl": "https://github.com/noproto",
-              "rating": "⭐ 442",
+              "rating": "⭐ 443",
               "officialUrl": "https://lab.flipper.net/apps/mfkey",
               "communityUrl": "",
               "repoUrl": "https://github.com/flipperdevices/flipperzero-good-faps/blob/-/mfkey",
               "links": {
                 "official": "https://lab.flipper.net/apps/mfkey",
                 "github": "https://github.com/flipperdevices/flipperzero-good-faps/blob/-/mfkey",
+                "community": ""
+              }
+            },
+            {
+              "section": "NFC",
+              "subsection": "",
+              "sourceBadges": [
+                "official"
+              ],
+              "sourceIcons": "🏛️",
+              "name": "Mi Band NFC",
+              "description": "Read, write and emulate NFC data on Xiaomi Mi Band devices using Flipper Zero.",
+              "author": "Luca Tomei",
+              "authorUrl": "",
+              "rating": "⭐ 10",
+              "officialUrl": "https://lab.flipper.net/apps/miband_nfc",
+              "communityUrl": "",
+              "repoUrl": "https://github.com/LucaTomei/flipper-miband-nfc-writer",
+              "links": {
+                "official": "https://lab.flipper.net/apps/miband_nfc",
+                "github": "https://github.com/LucaTomei/flipper-miband-nfc-writer",
                 "community": ""
               }
             },
@@ -568,6 +589,27 @@
               "links": {
                 "official": "https://lab.flipper.net/apps/mifare_fuzzer",
                 "github": "https://github.com/xMasterX/all-the-plugins/blob/-/apps_source_code/mifare_fuzzer",
+                "community": ""
+              }
+            },
+            {
+              "section": "NFC",
+              "subsection": "",
+              "sourceBadges": [
+                "official"
+              ],
+              "sourceIcons": "🏛️",
+              "name": "Networking NFC + QR",
+              "description": "Emulate NFC and display QR codes simultaneously",
+              "author": "DonJulve",
+              "authorUrl": "https://github.com/DonJulve",
+              "rating": "⭐ 5",
+              "officialUrl": "https://lab.flipper.net/apps/networking_nfc_qr_app",
+              "communityUrl": "",
+              "repoUrl": "https://github.com/DonJulve/Networking_NFC_QR_Flipper_Zero",
+              "links": {
+                "official": "https://lab.flipper.net/apps/networking_nfc_qr_app",
+                "github": "https://github.com/DonJulve/Networking_NFC_QR_Flipper_Zero",
                 "community": ""
               }
             },
@@ -624,7 +666,7 @@
               "description": "Application for writing to NFC tags with modifiable sector 0",
               "author": "@AloneLiberty",
               "authorUrl": "https://github.com/AloneLiberty",
-              "rating": "⭐ 442",
+              "rating": "⭐ 443",
               "officialUrl": "https://lab.flipper.net/apps/nfc_magic",
               "communityUrl": "",
               "repoUrl": "https://github.com/flipperdevices/flipperzero-good-faps/blob/-/nfc_magic",
@@ -645,7 +687,7 @@
               "description": "Create NFC files for BT MACs, Contacts, Links, Emails, Phones, Text and WiFis",
               "author": "@Willy-JL",
               "authorUrl": "https://github.com/Willy-JL",
-              "rating": "⭐ 554",
+              "rating": "⭐ 555",
               "officialUrl": "https://lab.flipper.net/apps/nfc_maker",
               "communityUrl": "",
               "repoUrl": "https://github.com/Next-Flip/Momentum-Apps/blob/-/nfc_maker",
@@ -945,6 +987,27 @@
                 "official"
               ],
               "sourceIcons": "🏛️",
+              "name": "HTW AC Remote",
+              "description": "HTW air conditioner IR remote control",
+              "author": "sokogen",
+              "authorUrl": "https://github.com/sokogen",
+              "rating": "⭐ 3",
+              "officialUrl": "https://lab.flipper.net/apps/htw_ac_remote",
+              "communityUrl": "",
+              "repoUrl": "https://github.com/sokogen/flipperzero-htw-ac-remote",
+              "links": {
+                "official": "https://lab.flipper.net/apps/htw_ac_remote",
+                "github": "https://github.com/sokogen/flipperzero-htw-ac-remote",
+                "community": ""
+              }
+            },
+            {
+              "section": "Infrared",
+              "subsection": "",
+              "sourceBadges": [
+                "official"
+              ],
+              "sourceIcons": "🏛️",
               "name": "Intervalometer",
               "description": "Intervalometer for Canon, Nikon, and Sony cameras. Uses IR shutter release.",
               "author": "@Nitepone",
@@ -1160,6 +1223,27 @@
         {
           "name": "",
           "items": [
+            {
+              "section": "GPIO",
+              "subsection": "",
+              "sourceBadges": [
+                "official"
+              ],
+              "sourceIcons": "🏛️",
+              "name": "24cxxprog",
+              "description": "EEPROM 24Cxx programmer via I2C",
+              "author": "@Dr.Mosfet",
+              "authorUrl": "",
+              "rating": "⭐ 9",
+              "officialUrl": "https://lab.flipper.net/apps/24cxxprog",
+              "communityUrl": "",
+              "repoUrl": "https://github.com/kamylwnb/24cxxprog",
+              "links": {
+                "official": "https://lab.flipper.net/apps/24cxxprog",
+                "github": "https://github.com/kamylwnb/24cxxprog",
+                "community": ""
+              }
+            },
             {
               "section": "GPIO",
               "subsection": "",
@@ -1634,7 +1718,7 @@
               "description": "Turn Flipper Zero with the Video Game Module into an air mouse",
               "author": "@nminaylov",
               "authorUrl": "https://github.com/nminaylov",
-              "rating": "⭐ 442",
+              "rating": "⭐ 443",
               "officialUrl": "https://lab.flipper.net/apps/vgm_air_mouse",
               "communityUrl": "",
               "repoUrl": "https://github.com/flipperdevices/flipperzero-good-faps/blob/-/air_mouse",
@@ -1676,7 +1760,7 @@
               "description": "Application for flashing AVR microcontrollers",
               "author": "@Skorpionm",
               "authorUrl": "https://github.com/Skorpionm",
-              "rating": "⭐ 442",
+              "rating": "⭐ 443",
               "officialUrl": "https://lab.flipper.net/apps/avr_isp",
               "communityUrl": "",
               "repoUrl": "https://github.com/flipperdevices/flipperzero-good-faps/blob/-/avr_isp_programmer",
@@ -1781,7 +1865,7 @@
               "description": "Enables use of Flipper as a debug probe for ARM devices, implements the CMSIS-DAP protocol",
               "author": "@DrZlo13",
               "authorUrl": "https://github.com/DrZlo13",
-              "rating": "⭐ 442",
+              "rating": "⭐ 443",
               "officialUrl": "https://lab.flipper.net/apps/dap_link",
               "communityUrl": "",
               "repoUrl": "https://github.com/flipperdevices/flipperzero-good-faps/blob/-/dap_link",
@@ -2554,6 +2638,27 @@
                 "official"
               ],
               "sourceIcons": "🏛️",
+              "name": "LD2410 Human Detector",
+              "description": "Human presence detection using HLK-LD2410 mmWave sensor",
+              "author": "Oscar Rodriguez",
+              "authorUrl": "",
+              "rating": "⭐ 2",
+              "officialUrl": "https://lab.flipper.net/apps/ld2410_human_detector",
+              "communityUrl": "",
+              "repoUrl": "https://github.com/sistemasorp/flipper-ld2410_human_detector",
+              "links": {
+                "official": "https://lab.flipper.net/apps/ld2410_human_detector",
+                "github": "https://github.com/sistemasorp/flipper-ld2410_human_detector",
+                "community": ""
+              }
+            },
+            {
+              "section": "GPIO",
+              "subsection": "",
+              "sourceBadges": [
+                "official"
+              ],
+              "sourceIcons": "🏛️",
               "name": "Lightmeter",
               "description": "Lightmeter app for photography",
               "author": "Oleksii Kutuzov",
@@ -2649,6 +2754,27 @@
               "links": {
                 "official": "https://lab.flipper.net/apps/mhz19_uart",
                 "github": "https://github.com/skotopes/flipperzero_mhz19_uart",
+                "community": ""
+              }
+            },
+            {
+              "section": "GPIO",
+              "subsection": "",
+              "sourceBadges": [
+                "official"
+              ],
+              "sourceIcons": "🏛️",
+              "name": "Moisture Sensor",
+              "description": "Read values from a capacitive moisture sensor v1.2",
+              "author": "smallwat3r",
+              "authorUrl": "https://github.com/smallwat3r",
+              "rating": "⭐ 3",
+              "officialUrl": "https://lab.flipper.net/apps/moisture_sensor",
+              "communityUrl": "",
+              "repoUrl": "https://github.com/smallwat3r/flipperzero-moisture-sensor",
+              "links": {
+                "official": "https://lab.flipper.net/apps/moisture_sensor",
+                "github": "https://github.com/smallwat3r/flipperzero-moisture-sensor",
                 "community": ""
               }
             },
@@ -2832,7 +2958,7 @@
               "description": "Control GPIO pins to generate digital signals",
               "author": "@nminaylov",
               "authorUrl": "https://github.com/nminaylov",
-              "rating": "⭐ 442",
+              "rating": "⭐ 443",
               "officialUrl": "https://lab.flipper.net/apps/signal_generator",
               "communityUrl": "",
               "repoUrl": "https://github.com/flipperdevices/flipperzero-good-faps/blob/-/signal_generator",
@@ -2874,7 +3000,7 @@
               "description": "Application for reading and writing 25-series SPI memory chips",
               "author": "@drunkbatya",
               "authorUrl": "https://github.com/drunkbatya",
-              "rating": "⭐ 442",
+              "rating": "⭐ 443",
               "officialUrl": "https://lab.flipper.net/apps/spi_mem_manager",
               "communityUrl": "",
               "repoUrl": "https://github.com/flipperdevices/flipperzero-good-faps/blob/-/spi_mem_manager",
@@ -2938,7 +3064,7 @@
               "description": "Application for reading temperature, humidity and pressure sensors like a DHT11/22, DS18B20, BMP280, HTU21 and more",
               "author": "@quen0n & (fixes by @xMasterX)",
               "authorUrl": "",
-              "rating": "⭐ 339",
+              "rating": "⭐ 340",
               "officialUrl": "https://lab.flipper.net/apps/unitemp",
               "communityUrl": "https://github.com/quen0n/unitemp-flipperzero",
               "repoUrl": "https://github.com/quen0n/unitemp-flipperzero",
@@ -3211,7 +3337,7 @@
               "description": "Flipper FTDI232H emulator.",
               "author": "SkorP",
               "authorUrl": "https://github.com/SkorP",
-              "rating": "⭐ 442",
+              "rating": "⭐ 443",
               "officialUrl": "https://lab.flipper.net/apps/flip_tdi",
               "communityUrl": "",
               "repoUrl": "https://github.com/flipperdevices/flipperzero-good-faps/blob/-/flip_tdi",
@@ -3253,7 +3379,7 @@
               "description": "Implements a mass storage device over USB for disk images",
               "author": "@nminaylov @kevinwallace",
               "authorUrl": "",
-              "rating": "⭐ 442",
+              "rating": "⭐ 443",
               "officialUrl": "https://lab.flipper.net/apps/mass_storage",
               "communityUrl": "",
               "repoUrl": "https://github.com/flipperdevices/flipperzero-good-faps/blob/-/mass_storage",
@@ -3283,6 +3409,27 @@
                 "official": "https://lab.flipper.net/apps/mouse_jiggler",
                 "github": "https://github.com/DavidBerdik/flipper-mouse-jiggler",
                 "community": "https://github.com/MuddledBox/flipperzero-firmware/tree/Mouse_Jiggler/applications/mouse_jiggler"
+              }
+            },
+            {
+              "section": "USB",
+              "subsection": "",
+              "sourceBadges": [
+                "official"
+              ],
+              "sourceIcons": "🏛️",
+              "name": "PC Monitor USB",
+              "description": "Application for monitoring PC resources via USB",
+              "author": "DonJulve",
+              "authorUrl": "https://github.com/DonJulve",
+              "rating": "⭐ 4",
+              "officialUrl": "https://lab.flipper.net/apps/pc_monitor_usb",
+              "communityUrl": "",
+              "repoUrl": "https://github.com/DonJulve/Flipper-Zero-PC-Monitor-USB",
+              "links": {
+                "official": "https://lab.flipper.net/apps/pc_monitor_usb",
+                "github": "https://github.com/DonJulve/Flipper-Zero-PC-Monitor-USB",
+                "community": ""
               }
             },
             {
@@ -3496,7 +3643,7 @@
               "description": "Arkanoid game that supports the Video Game Module motion sensor",
               "author": "@DrZlo13",
               "authorUrl": "https://github.com/DrZlo13",
-              "rating": "⭐ 442",
+              "rating": "⭐ 443",
               "officialUrl": "https://lab.flipper.net/apps/air_arkanoid",
               "communityUrl": "",
               "repoUrl": "https://github.com/flipperdevices/flipperzero-good-faps/blob/-/air_arkanoid",
@@ -3524,6 +3671,27 @@
               "links": {
                 "official": "https://lab.flipper.net/apps/air_labyrinth",
                 "github": "https://github.com/jamisonderek/flipper-zero-tutorials/blob/-/vgm/apps/air_labyrinth",
+                "community": ""
+              }
+            },
+            {
+              "section": "Games",
+              "subsection": "",
+              "sourceBadges": [
+                "official"
+              ],
+              "sourceIcons": "🏛️",
+              "name": "Apple Grabber",
+              "description": "Apple grabber game, default mode is vertical",
+              "author": "Julio Rodriguez",
+              "authorUrl": "",
+              "rating": "⭐ 2",
+              "officialUrl": "https://lab.flipper.net/apps/apple_grabber",
+              "communityUrl": "",
+              "repoUrl": "https://github.com/d7d8/apple-grabber",
+              "links": {
+                "official": "https://lab.flipper.net/apps/apple_grabber",
+                "github": "https://github.com/d7d8/apple-grabber",
                 "community": ""
               }
             },
@@ -3681,6 +3849,27 @@
                 "official"
               ],
               "sourceIcons": "🏛️",
+              "name": "BzzBzz",
+              "description": "Haptic rhythm-matching game",
+              "author": "Koray Er",
+              "authorUrl": "",
+              "rating": "⭐ 1",
+              "officialUrl": "https://lab.flipper.net/apps/bzzbzz",
+              "communityUrl": "",
+              "repoUrl": "https://github.com/ikiruneo/bzzbzz",
+              "links": {
+                "official": "https://lab.flipper.net/apps/bzzbzz",
+                "github": "https://github.com/ikiruneo/bzzbzz",
+                "community": ""
+              }
+            },
+            {
+              "section": "Games",
+              "subsection": "",
+              "sourceBadges": [
+                "official"
+              ],
+              "sourceIcons": "🏛️",
               "name": "Catacombs Of The Damned",
               "description": "A first-person dungeon crawler ported to Flipper Zero.",
               "author": "@apfxtech",
@@ -3776,6 +3965,27 @@
               "links": {
                 "official": "https://lab.flipper.net/apps/game_connect_wires",
                 "github": "https://github.com/AlexTaran/flipperzero/blob/-/games/connect_wires",
+                "community": ""
+              }
+            },
+            {
+              "section": "Games",
+              "subsection": "",
+              "sourceBadges": [
+                "official"
+              ],
+              "sourceIcons": "🏛️",
+              "name": "CountDown",
+              "description": "Solve target number from 6 numbers like the CountDown TV Show",
+              "author": "Oscar Rodriguez",
+              "authorUrl": "",
+              "rating": "⭐ 2",
+              "officialUrl": "https://lab.flipper.net/apps/countdown",
+              "communityUrl": "",
+              "repoUrl": "https://github.com/sistemasorp/flipper-countdown",
+              "links": {
+                "official": "https://lab.flipper.net/apps/countdown",
+                "github": "https://github.com/sistemasorp/flipper-countdown",
                 "community": ""
               }
             },
@@ -4065,7 +4275,7 @@
               "description": "Get inspired with a random motivational quote or fortune each time you open the app.",
               "author": "@evillero",
               "authorUrl": "https://github.com/evillero",
-              "rating": "⭐ 17",
+              "rating": "⭐ 18",
               "officialUrl": "https://lab.flipper.net/apps/fortune_cookie",
               "communityUrl": "",
               "repoUrl": "https://github.com/evillero/fortune_cookie",
@@ -4777,6 +4987,27 @@
                 "official"
               ],
               "sourceIcons": "🏛️",
+              "name": "Slots",
+              "description": "81-way slot machine",
+              "author": "vh8t",
+              "authorUrl": "https://github.com/vh8t",
+              "rating": "⭐ 3",
+              "officialUrl": "https://lab.flipper.net/apps/xyz_vh8t_slots",
+              "communityUrl": "",
+              "repoUrl": "https://github.com/vh8t/flipperzero-slots",
+              "links": {
+                "official": "https://lab.flipper.net/apps/xyz_vh8t_slots",
+                "github": "https://github.com/vh8t/flipperzero-slots",
+                "community": ""
+              }
+            },
+            {
+              "section": "Games",
+              "subsection": "",
+              "sourceBadges": [
+                "official"
+              ],
+              "sourceIcons": "🏛️",
               "name": "Snake 2.0",
               "description": "Advanced Snake Game (Remake of original Snake)",
               "author": "@Willzvul",
@@ -5360,7 +5591,7 @@
               "description": "An app to play RTTL music files",
               "author": "@DrZlo13",
               "authorUrl": "https://github.com/DrZlo13",
-              "rating": "⭐ 442",
+              "rating": "⭐ 443",
               "officialUrl": "https://lab.flipper.net/apps/music_player",
               "communityUrl": "",
               "repoUrl": "https://github.com/flipperdevices/flipperzero-good-faps/blob/-/music_player",
@@ -5660,11 +5891,32 @@
                 "official"
               ],
               "sourceIcons": "🏛️",
+              "name": "Animation Switcher",
+              "description": "Change your background animations on the fly!",
+              "author": "@lsalik2",
+              "authorUrl": "https://github.com/lsalik2",
+              "rating": "⭐ 4",
+              "officialUrl": "https://lab.flipper.net/apps/animation_switcher",
+              "communityUrl": "",
+              "repoUrl": "https://github.com/lsalik2/FlipperAnimationSwitcher",
+              "links": {
+                "official": "https://lab.flipper.net/apps/animation_switcher",
+                "github": "https://github.com/lsalik2/FlipperAnimationSwitcher",
+                "community": ""
+              }
+            },
+            {
+              "section": "Tools",
+              "subsection": "",
+              "sourceBadges": [
+                "official"
+              ],
+              "sourceIcons": "🏛️",
               "name": "Authenticator",
               "description": "Software-based TOTP/HOTP authenticator for Flipper Zero device",
               "author": "Alexander Kopachov (@akopachov)",
               "authorUrl": "",
-              "rating": "⭐ 659",
+              "rating": "⭐ 660",
               "officialUrl": "https://lab.flipper.net/apps/totp",
               "communityUrl": "",
               "repoUrl": "https://github.com/akopachov/flipper-zero_authenticator/blob/-/totp",
@@ -5811,7 +6063,7 @@
               "description": "Simple clock app",
               "author": "@kowalski7cc",
               "authorUrl": "https://github.com/kowalski7cc",
-              "rating": "⭐ 442",
+              "rating": "⭐ 443",
               "officialUrl": "https://lab.flipper.net/apps/clock",
               "communityUrl": "",
               "repoUrl": "https://github.com/flipperdevices/flipperzero-good-faps/blob/-/clock",
@@ -6714,7 +6966,7 @@
               "description": "Identify the reader type: NFC (13 MHz) and/or RFID (125 KHz).",
               "author": "@SkorP",
               "authorUrl": "https://github.com/SkorP",
-              "rating": "⭐ 442",
+              "rating": "⭐ 443",
               "officialUrl": "https://lab.flipper.net/apps/nfc_rfid_detector",
               "communityUrl": "",
               "repoUrl": "https://github.com/flipperdevices/flipperzero-good-faps/blob/-/nfc_rfid_detector",
@@ -6857,6 +7109,27 @@
                 "official"
               ],
               "sourceIcons": "🏛️",
+              "name": "Theme Manager",
+              "description": "Manage dolphin animation themes from SD card",
+              "author": "Hoasker",
+              "authorUrl": "https://github.com/Hoasker",
+              "rating": "⭐ 7",
+              "officialUrl": "https://lab.flipper.net/apps/theme_manager",
+              "communityUrl": "",
+              "repoUrl": "https://github.com/Hoasker/flipper-theme-manager",
+              "links": {
+                "official": "https://lab.flipper.net/apps/theme_manager",
+                "github": "https://github.com/Hoasker/flipper-theme-manager",
+                "community": ""
+              }
+            },
+            {
+              "section": "Tools",
+              "subsection": "",
+              "sourceBadges": [
+                "official"
+              ],
+              "sourceIcons": "🏛️",
               "name": "Tone Generator",
               "description": "A simple app to generate sound tones.",
               "author": "@gemisis",
@@ -6924,7 +7197,7 @@
               "description": "This app is a standalone firmware updater/installer for the Video Game Module",
               "author": "@gsurkov",
               "authorUrl": "https://github.com/gsurkov",
-              "rating": "⭐ 442",
+              "rating": "⭐ 443",
               "officialUrl": "https://lab.flipper.net/apps/video_game_module_tool",
               "communityUrl": "",
               "repoUrl": "https://github.com/flipperdevices/flipperzero-good-faps/blob/-/video_game_module_tool",
@@ -7088,6 +7361,27 @@
               "links": {
                 "official": "https://lab.flipper.net/apps/bt_trigger",
                 "github": "https://github.com/xMasterX/all-the-plugins/blob/-/apps_source_code/bluetooth-trigger",
+                "community": ""
+              }
+            },
+            {
+              "section": "Bluetooth",
+              "subsection": "",
+              "sourceBadges": [
+                "official"
+              ],
+              "sourceIcons": "🏛️",
+              "name": "BTHome",
+              "description": "BTHome implementation for the Flipper Zero",
+              "author": "Alessandro Ghedini",
+              "authorUrl": "",
+              "rating": "⭐ 5",
+              "officialUrl": "https://lab.flipper.net/apps/bthome",
+              "communityUrl": "",
+              "repoUrl": "https://github.com/ghedo/flipper-playground/blob/-/bthome",
+              "links": {
+                "official": "https://lab.flipper.net/apps/bthome",
+                "github": "https://github.com/ghedo/flipper-playground/blob/-/bthome",
                 "community": ""
               }
             },
@@ -7593,7 +7887,7 @@
               "description": "Official apps maintained by the Flipper Team and collaborators",
               "author": "flipperdevices",
               "authorUrl": "https://github.com/flipperdevices",
-              "rating": "⭐ 442",
+              "rating": "⭐ 443",
               "officialUrl": "",
               "communityUrl": "https://github.com/flipperdevices/flipperzero-good-faps",
               "repoUrl": "https://github.com/flipperdevices/flipperzero-good-faps",
@@ -7802,7 +8096,7 @@
               "description": "Generate TOTP authentication codes",
               "author": "akopachov",
               "authorUrl": "https://github.com/akopachov",
-              "rating": "⭐ 659",
+              "rating": "⭐ 660",
               "officialUrl": "",
               "communityUrl": "https://github.com/akopachov/flipper-zero_authenticator",
               "repoUrl": "https://github.com/akopachov/flipper-zero_authenticator",
@@ -7823,7 +8117,7 @@
               "description": "Updated plugin tutorial based on new build methods",
               "author": "csBlueChip",
               "authorUrl": "https://github.com/csBlueChip",
-              "rating": "⭐ 298",
+              "rating": "⭐ 299",
               "officialUrl": "",
               "communityUrl": "https://github.com/csBlueChip/FlipperZero_plugin_howto",
               "repoUrl": "https://github.com/csBlueChip/FlipperZero_plugin_howto",
@@ -8336,7 +8630,7 @@
               "description": "Literally wrote the book on making animations",
               "author": "skizzophrenic",
               "authorUrl": "https://github.com/skizzophrenic",
-              "rating": "⭐ 718",
+              "rating": "⭐ 719",
               "officialUrl": "",
               "communityUrl": "https://github.com/skizzophrenic/Talking-Sasquach",
               "repoUrl": "https://github.com/skizzophrenic/Talking-Sasquach",
@@ -8608,7 +8902,7 @@
               "description": "KiCad prototype boards",
               "author": "lomalkin",
               "authorUrl": "https://github.com/lomalkin",
-              "rating": "⭐ 110",
+              "rating": "⭐ 109",
               "officialUrl": "",
               "communityUrl": "https://github.com/lomalkin/flipperzero-protoboards-kicad",
               "repoUrl": "https://github.com/lomalkin/flipperzero-protoboards-kicad",
@@ -9347,7 +9641,7 @@
               "description": "Unofficial CLI wrapper writter in Python",
               "author": "wh00hw",
               "authorUrl": "https://github.com/wh00hw",
-              "rating": "⭐ 428",
+              "rating": "⭐ 429",
               "officialUrl": "",
               "communityUrl": "https://github.com/wh00hw/pyFlipper",
               "repoUrl": "https://github.com/wh00hw/pyFlipper",
