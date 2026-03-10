@@ -4,7 +4,7 @@
 
 **Goal:** Python script that fetches Flipper Zero apps from the Official Catalog API + awesome-flipperzero, generates a categorized README.md with 123fzero's apps featured first.
 
-**Architecture:** Single Python script with functions for each data source. Fetches categories and apps from the official API (list endpoint only — avoids 322 detail calls). Parses awesome-flipperzero markdown for extra sections. Uses GitHub API for 123fzero repos. Generates README.md. GitHub Action runs it weekly.
+**Architecture:** Single Python script with functions for each data source. Fetches categories and apps from the official API (list endpoint only — avoids 322 detail calls). Parses awesome-flipperzero markdown for extra sections. Uses GitHub API for 123fzero repos. Generates README.md and `site/catalog.json`. GitHub Action runs it daily, then GitHub Pages deploys the updated site.
 
 **Tech Stack:** Python 3.10+, `requests`, GitHub Actions
 
@@ -514,7 +514,7 @@ name: Update Catalog
 
 on:
   schedule:
-    - cron: '0 6 * * 1'  # Every Monday at 06:00 UTC
+    - cron: '0 6 * * *'  # Every day at 06:00 UTC
   workflow_dispatch:  # Manual trigger
 
 permissions:
@@ -551,7 +551,7 @@ jobs:
 
 ```bash
 git add .github/workflows/update-catalog.yml
-git commit -m "ci: add GitHub Action for weekly catalog updates"
+git commit -m "ci: add GitHub Action for daily catalog updates"
 ```
 
 ---

@@ -2,7 +2,7 @@
 
 ## Goal
 
-Python script that generates a comprehensive README.md catalog of Flipper Zero apps, organized by categories, with 123fzero's own apps featured first in each category. Runs manually or via GitHub Actions cron.
+Python script that generates a comprehensive README.md catalog of Flipper Zero apps, organized by categories, with 123fzero's own apps featured first in each category. Runs manually or via a daily GitHub Actions cron, then publishes the site via GitHub Pages.
 
 ## Data Sources
 
@@ -41,7 +41,8 @@ Python script that generates a comprehensive README.md catalog of Flipper Zero a
 |------|---------|
 | `scripts/update_catalog.py` | Main script |
 | `scripts/requirements.txt` | Python dependencies |
-| `.github/workflows/update-catalog.yml` | Weekly cron GitHub Action |
+| `.github/workflows/update-catalog.yml` | Daily cron GitHub Action for catalog refresh |
+| `.github/workflows/deploy-pages.yml` | GitHub Pages deploy workflow triggered after catalog refreshes and manual site changes |
 | `README.md` | Generated output |
 
 ## Script Modules

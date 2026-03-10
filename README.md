@@ -720,4 +720,4 @@ Discover Flipper Zero apps, Flipper Zero plugins, Flipper Zero games, and practi
 
 ---
 
-*This catalog is auto-generated. Run `python scripts/update_catalog.py` to refresh the data.*
+*This catalog is auto-generated. Run `python scripts/update_catalog.py` to refresh the data locally, or let the daily `Update Catalog` workflow refresh `README.md`, `site/catalog.json`, and the GitHub Pages site automatically.*
